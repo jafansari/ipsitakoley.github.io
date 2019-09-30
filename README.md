@@ -1,8 +1,8 @@
-## Project page for CPS
+# Term Project Page for CPS Course
 
-# go to: https://ipsitakoley.github.io/
+## go to: https://ipsitakoley.github.io/
 
-# while editing in local:
+## while editing in local:
 
 - to start the server: 
     > python http.server 8081
