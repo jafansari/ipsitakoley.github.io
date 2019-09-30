@@ -15,31 +15,33 @@
 </div>
 <h1 align="center"><font color="blue"> Project 3</font>: Stability Analysis under Different Ethernet Gateway Network Strategies </h1>
 <h3>Objective</h3>
-<p>Due to recent growth in feature rich cyber physical systems like automobiles, the concept of shared Electrical Control Units (ECU) has come into the picture. Instead of having different ECUs for different control components, different controllers can be mapped to same ECU. Based on the periodicity, deadlines and disturbance margins of each control task, mapped to same ECU, it can decide on certain control strategies to accommodate them. One of them is dropping certain control executions in order to accommodate some other control task within the residual bandwidth.[Refer 5]
+<p>Due to recent growth in feature rich cyber physical systems like automobiles, the concept of shared Electrical Control Units (ECU) has come into the picture. Instead of having different ECUs for different control components, different controllers can be mapped to same ECU. Based on the periodicity, deadlines and disturbance margins of each control task, mapped to same ECU, it can decide on certain control strategies to accommodate them. One of them is dropping certain control executions in order to accommodate some other control task within the residual bandwidth.[<cite><a href=#ref5>5</a></cite>]
   <ol>
-    <li>ECU1 is connected to ECU2 and camera via Ethernet Gateway. Camera sends image information through this gateway. ECU2 has ADAS Application which processes the camera data and sends feature extracted data to ECU1. </li>
-    <li>ECU2 is part of CAN network and it can be assumed some other ECUs are also connected to the same gateway causing some traffic. [Refer 2 & 4] </li>
-    <li>Different strategies used in gateway affects the network traffic and delays the arrival of feature data to ECU1.</li>
-    <li>We decide if it’s a deadline miss based on calculated periodicity of the task in ECU1 and Response Time of the network, i.e. tn+rt>t(n+1) where tn=time at nth period, t(n+1)=time at (n+1)th period and rt=response time of the network.</li>
+    <li>ECU-1, ECU-2 and Camera are connected via Ethernet gateway. The camera sends image information to the gateway. ECU1 has ADAS Application running which processes the camera data and sends feature extracted data to ECU2.[<cite><a href=#ref3>3</a></cite>]</li>
+    <li>ECU2 is part of CAN network and it can be assumed some other ECUs are also connected to the same gateway causing some traffic. [<cite><a href=#ref2>2</a>, <a href=#ref4>4</a></cite>] </li>
+    <li>Different strategies used in gateway affect the network traffic and delays the arrival of feature data to ECU2.</li>
+    <li>The task activation arrival pattern for the task in ECU-2 depends upon the network traffic and scheduling strategy in the gateway.</li>
+    <li>Find the hyper period for the tasks in ECU-2 from the pattern of arrival.</li>
+    <li>In that hyper period , we decide whether if it’s a deadline miss or not based on calculating response time of the task in ECU2, i.e. (t n +wcrt)&gt;t (n+1) where t n -time at the n th instance, t (n+1) -time at (n+1) th instance and wcrt=response time of the task.</li>
     <li>Based on the deadline miss we can generate a pattern when deadline miss contributes a ‘0’ and execution within deadline contributes ‘1’.</li>
     <li>Given a recognizer for all supported patterns to run the target plant following some performance metric, it needs to be figured out if the current pattern is recognizable by it.</li>
-    <li>If not, the network must be altered so that a recognizable pattern can be generated. [Refer 1]</li>
+    <li>If not, the network strategies must be altered so that a recognizable pattern can be generated.[<cite><a href=#ref1>1</a></cite>]</li>
   </ol>
 
 <h3> Evaluation Guidelines:</h3>
 <ul>
-<li>Implementation-60%</li>
+<li> Implementation-60%</li>
 <li> Project Report-20%</li> 
-<li>Project Presentation-20%</li>
+<li> Project Presentation-20%</li>
 </ul>
 
 <h3>References</h3>
 <ol>
-<li><a href="1_CPA Compositional Performance Analysis.pdf">CPA Compositional Performance Analysis</a></li>
-<li><a href="2_ethernetgatewaypyCPA.pdf">Formal timing analysis of CAN-to-Ethernet gateway strategies in automotive networks</a></li>
-<li><a href="3_pyCPA.pdf">Compositional Performance Analysis in Python with pyCPA</a></li>
-<li><a href="4_Modeling of Ethernet AVB Networks forWorst-Case Timing Analysis.pdf">Modeling of Ethernet AVB Networks for Worst-Case Timing Analysis</a></li>
-<li><a href="5_A Structured Methodology for Pattern based Adaptive_Scheduling_in_Embedded_Control.pdf">A Structured Methodology for Pattern based Adaptive Scheduling in Embedded Control</a></li>
+<li><a name="ref1" href="1_CPA Compositional Performance Analysis.pdf">CPA Compositional Performance Analysis</a></li>
+<li><a name="ref2" href="2_ethernetgatewaypyCPA.pdf">Formal timing analysis of CAN-to-Ethernet gateway strategies in automotive networks</a></li>
+<li><a name="ref3" href="3_pyCPA.pdf">Compositional Performance Analysis in Python with pyCPA</a></li>
+<li><a name="ref4" href="4_Modeling of Ethernet AVB Networks forWorst-Case Timing Analysis.pdf">Modeling of Ethernet AVB Networks for Worst-Case Timing Analysis</a></li>
+<li><a name="ref5" href="5_A Structured Methodology for Pattern based Adaptive_Scheduling_in_Embedded_Control.pdf">A Structured Methodology for Pattern based Adaptive Scheduling in Embedded Control</a></li>
 </ol>
 
 </p>
