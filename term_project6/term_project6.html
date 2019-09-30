@@ -1,0 +1,48 @@
+<html>
+<head>
+  <title>CPS Term Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="jumbotron text-center">
+  <h1><font color="green">Foundation of Cyber Physical Systems</font></h1>
+  <h3>Term Project</h3>
+</div>
+<h1 align="center"><font color="blue"> Project 6</font>: Securing Real-time Multi-hop Wireless Networked Control System</h1>
+<h3>Description</h3>
+<p>Consider a distributed cyber-physical system (CPS) in which remotely located physical plants and controllers communicate among themselves over a multi-hop wireless sensor network (WSN). Such control set-up is termed as a wireless network control system (WNCS). Unattended communication among devices in distributed CPS implementations makes new pathways for malicious interference.  Heavyweight standard cryptographic techniques to encrypt every packet on every channel will incur timing overhead. This may violate the real-time guarantee that is utmost important for safety-critical CPSs. Hence, we need to find out the attack surfaces of WNCSs and implement attack detection mechanism that complies with the real-time requirement of the CPS.
+<h3>Objective and Implementation Steps</h3>
+  <ol>
+    <li>Design a WNCS as given in the following diagram consisting of two plants, two intermediate nodes, one computing platform that has control programs for both the plants.
+<img src="WSN.png" alt="Sample WNCS"></li>
+    <li>Basic TDMA based communication (e.g. WirelessHART) has to designed keeping in mind the communication delay.</li>
+    <li>Consider that the objective of an adversary is to gain knowledge about the communication pattern within the above network. For example, an attacker may listen to a communication channel and try to predict the TDMA slot in which two particular nodes are communicating. On the other hand, in some networks, an adversary may not get direct access to the communication channel. He has to then somehow get the necessary information from the WSN nodes via some side-channel attack techniques. You need to explore such disclosure attack scenarios and provide a detailed survey.</li>
+    <li>Assuming that adversary has gained required information to attack the WNCS, implement one attack model on the given network.</li>  
+    <li>Propose and implement one detection mechanism to thwart such an attack.</li>
+  </ol>
+
+<h3> Evaluation Guidelines:</h3>
+<ul>
+<li>Implementation (60%): Design the WNCS with support for the points mentioned above. 
+  Emphasis shall be given on exploring disclosure attack scenarios, the attack model and the detection mechanism.</li>
+<li> Project Report (20%): Design a detailed report documenting the various modules of the framework and experimental results. </li> 
+<li>Project Presentation (20%): Design a detailed presentation describing your framework and experimental observations.</li>
+</ul>
+
+<h3>Reference Paper</h3>
+<ul>
+  <li><a href="08119896.pdf" target="_blank">Co-Synthesis of Loop Execution Patterns for Multihop Control Networks</a></li>
+  <li><a href="RTN19.pdf" target="_blank">SlotSwapper: A Schedule Randomization protocol for
+      Real-Time WirelessHART Networks</a></li>
+  <li><a href="05984466.pdf" target="_blank">A Trade-off Model for Performance and Security in
+      Secured Networked Control Systems</a></li>   
+  <li><a href="tpsj_HICONS12.pdf" target="_blank">Attack Models and Scenarios for Networked Control Systems</a></li>
+  </ul>
+
+</p>
+</body>
+</html>

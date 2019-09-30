@@ -1,0 +1,47 @@
+<html>
+<head>
+  <title>CPS Term Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="jumbotron text-center">
+  <h1><font color="green">CPS Term Project</font></h1>
+</div>
+<h1 align="center"><font color="blue"> Project 1</font>: Delay-Aware Real-Time Wireless Networked Control Systems</h1>
+<h3>Description</h3>
+<p>Feedback control systems wherein the control loops are closed through a real-time wireless network are called Wireless Networked Control Systems (WNCSs). The defining feature of a WNCS is that information (reference input, plant output, control input, etc.) is exchanged using a multi-hop wireless network among control system components (sensors, controller, actuators, etc.). Conventional control theories with many ideal assumptions, such as synchronized control and nondelayed sensing and actuation, must be reevaluated before they can be applied to WNCSs. One important issue is the network-induced delay (sensor-to-controller delay and controller-to-actuator delay) that occurs while exchanging data among devices connected to the shared medium. This delay, either constant (up to jitter) or time varying, can contribute to varying sampling periods for any physical system and its control loop in a network. Hence, eventually, the performance of control systems designed without considering the delay can be degraded and the system can even be destabilized. The objective of this project is to design such a WNCS network considering the delay and then implement a control schema to handle the issue monitoring the performance of the control system.
+<h3>Design and Implementation Steps</h3>
+  <ol>
+    <li>Consider the following diagram and design a WNCS that consists of one plant, one controller and two intermediate nodes. This WNCS should monitor real time and sense the network-induced delay. The plant will be a Matlab-Simulink based model interfaced with Arduino MEGA, an open-source electronics platform based on easy-to-use hardware and software. Arduino UNO platform will be used as a heart of all other nodes in the network interfaced with RF module nRF24L01+.
+<img src="network_graph_timedelay.png" alt="Sample WNCS"></li>
+    <li>Develop the interface between Matlab-Simulink based plant and Arduino MEGA which should work in almost real-time.</li>
+    <li>Integrate RF module and RTC Real Time Clock Memory Module with the Arduino which help in wireless transmission and monitoring real time in the network.</li>
+    <li>Implement python based scripts which will generate codes for all the nodes and upload them automatically provided with the network topology and corresponding communication schedule.</li>  
+    <li>Evaluate the network-induced delay and varying sampling periods for the plant in the WNCS.</li>
+    <li>Design a control schema and implement different controllers in the computing platform to cope up with this change in sampling periods for a single control loop.</li>
+        
+  </ol>
+
+<h3> Evaluation Guidelines:</h3>
+<ul>
+<li>Implementation (60%): Design the WNCS with support for the points mentioned above. 
+  Emphasis shall be given on designing the interface between Matlab-Simulink based plant and Arduino MEGA, network-induced delay measuring framework and the control schema to address the challenge.</li>
+<li> Project Report (20%): Design a detailed report documenting the various modules of the framework and experimental results. </li> 
+<li>Project Presentation (20%): Design a detailed presentation describing your framework and experimental observations.</li>
+</ul>
+
+<h3>Reference Paper</h3>
+<ul>
+<li>nRF24L01+ Product Specification <a href="nRF24L01Pluss_Preliminary_Product_Specification_v1_0.pdf" target="_blank">link</a></li>
+<li>Wei Zhang, M. S. Branicky and S. M. Phillips, "Stability of networked control systems," in IEEE Control Systems Magazine, vol. 21, no. 1, pp. 84-99, Feb. 2001. <a href="" target="_blank">link</a></li> 
+<li>Co-Synthesis of Loop Execution Patterns for Multihop Control Networks <a href="" target="_blank">link</a></li>
+<li>L. Dugard, E.I. Verriest, Stability and Control of Time-Delay Systems (Lecture Notes in Control and Information Sciences), Germany, Heidelberg:Springer-Verlag, vol. 228, 1997. <a href="" target="_blank">link</a></li>
+</ul>
+
+</p>
+</body>
+</html>

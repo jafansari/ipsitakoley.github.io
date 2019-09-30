@@ -1,0 +1,46 @@
+
+<html>
+<head>
+  <title>CPS Term Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="jumbotron text-center">
+  <h1><font color="green">Foundation of Cyber Physical Systems</font></h1>
+  <h3>Term Project</h3>
+</div>
+<h1 align="center"><font color="blue"> Project 3</font>: Stability Analysis under Different Ethernet Gateway Strategies </h1>
+<h3>Objective</h3>
+<p>Due to recent growth in feature rich cyber physical systems like automobiles, the concept of shared Electrical Control Units (ECU) has come into the picture. Instead of having different ECUs for different control components, different controllers can be mapped to same ECU. Based on the periodicity, deadlines and disturbance margins of each control task, mapped to same ECU, it can decide on certain control strategies to accommodate them. One of them is dropping certain control executions in order to accommodate some other control task within the residual bandwidth.[Refer 5]
+  <ol>
+    <li>ECU1 is connected to ECU2 and camera via Ethernet Gateway. Camera sends image information through this gateway. ECU2 has ADAS Application which processes the camera data and sends feature extracted data to ECU1. </li>
+    <li>ECU2 is part of CAN network and it can be assumed some other ECUs are also connected to the same gateway causing some traffic. [Refer 2 & 4] </li>
+    <li>Different strategies used in gateway affects the network traffic and delays the arrival of feature data to ECU1.</li>
+    <li>We decide if it’s a deadline miss based on calculated periodicity of the task in ECU1 and Response Time of the network, i.e. tn+rt>t(n+1) where tn=time at nth period, t(n+1)=time at (n+1)th period and rt=response time of the network.</li>
+    <li>Based on the deadline miss we can generate a pattern when deadline miss contributes a ‘0’ and execution within deadline contributes ‘1’.</li>
+    <li>Given a recognizer for all supported patterns to run the target plant following some performance metric, it needs to be figured out if the current pattern is recognizable by it.</li>
+    <li>If not, the network must be altered so that a recognizable pattern can be generated. [Refer 1]</li>
+  </ol>
+
+<h3> Evaluation Guidelines:</h3>
+<ul>
+<li>Implementation (60%): Design the library with support for the points mentioned above. 
+  Emphasis shall be given on designing efficient CUDA kernel routines for convolution kernels (with and without thread coarsening) 
+  for the computation graph </li>
+<li> Project Report (20%): Design a detailed report documenting the various modules of the framework, the optimizations used for CUDA kernel operations
+  (both using and not using fusion), and experimental results for the two CNN architectures. </li> 
+<li>Project Presentation (20%) Design a detailed presentation describing your framework and experimental observations</li>
+</ul>
+
+<h3>References</h3>
+<ol>
+<li>"Formal timing analysis of CAN-to-Ethernet gateway strategies in automotive networks"</li>
+</ol>
+
+</p>
+</body>
+</html>

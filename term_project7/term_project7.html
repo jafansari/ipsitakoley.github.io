@@ -1,0 +1,50 @@
+
+<html>
+<head>
+  <title>CPS Term Project</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="jumbotron text-center">
+  <h1><font color="green">Foundation of Cyber Physical Systems</font></h1>
+  <h3>Term Project</h3>
+</div>
+<h1 align="center"><font color="blue"> Project 7</font>: Variable Threshold Based Detection Mechanism</h1>
+<h3>Description</h3>
+<p>Most of the safety critical cyber physical systems (CPS) require to meet real time guarantees with stringent power and energy constraints. Securing those applications with standard cryptography algorithms (like RSA, AES etc.) incurs computational and timing overhead. Suitable light weight security primitives are considered to secure such systems. One such method is residue based detector. In residue based detection mechanism, residue is computed as difference between actual and estimated sensor output. This residue is then compared with a pre-defined threshold. If the residue exceeds the threshold an alarm is generated to indicate an attack. Broad classification of residue based detection mechanism is given in the below figure. Residue can be computed in two ways: a) in stateless method only current residue is considered to be compared with given threshold, and b) in stateful method past residues are also considered. The predefined threshold can be same for all instance (static) or it can vary (variable). However, it has been seen that if we have variable threshold, false alarm rate can be minimized. By false alarm we mean noise is considered as an attack. 
+
+    <img src="DetectionType.png" alt="Classification of Detection Methods">
+  <h3>Objective and Implementation Steps: </h3>
+  <ol>
+    <li>Given a state space model and performance criteria, design a controller and an observer</li>
+    <li>You will be provided with a monitoring system (not a residue based one). Synthesis attack vectors that violates the performance criteria of the system (given in 1) bypassing the monitoring system</li>
+    <li>You will be provided with two variable threshold based detection algorithms. You need to automate them. The algorithms need to compute residues. You have to compute the residue using CUSUM method</li>
+    <li>Compare the algorithms in terms of false alarm rate</li>  
+        
+  </ol>
+
+<h3> Evaluation Guidelines:</h3>
+<ul>
+<li>Implementation-60%</li>
+<li> Project Report-20%</li> 
+<li>Project Presentation-20%</li>
+</ul>
+
+<h3>Reference</h3>
+<ul>
+    <li><a href="SATBAsedAttackSynthesis.pdf" target="_blank">SAT-based Synthesis of Spoofing Attacks
+        in Cyber-Physical Control Systems</a></li>
+    <li><a href="ResidueBasedAttack.pdf" target="_blank">Secure Control - A Quantitative Risk Management Approach</a></li>
+    <li><a href="CUSUM.pdf" target="_blank">Characterization of Model-Based Detectors for CPS
+        Sensor Faults/Attacks</a></li>   
+    <li><a href="DiscretePID.pdf" target="_blank">PID in State Space Form</a></li>
+    <li><a href="https://www.cs.tau.ac.il/~msagiv/courses/asv/z3py/guide-examples.htm" target="_blank">Z3 py</a></li>
+    </ul>
+
+</p>
+</body>
+</html>
